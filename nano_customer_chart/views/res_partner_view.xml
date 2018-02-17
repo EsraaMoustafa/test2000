@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_button_box']" position="inside">
+                    <button class="oe_stat_button org-chart" special="cancel"
+                            icon="fa-list-ul">
+                        <div class="o_stat_info">
+                            <span class="o_stat_text">Hierarchy</span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="before">
+                    <field name="parent_id" string="HQ"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

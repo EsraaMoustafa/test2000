@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="web assets backend" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet"
+                      href="/nano_customer_chart/static/libs/getorgchart/css/getorgchart.css"/>
+                <script type="text/javascript"
+                        src="/nano_customer_chart/static/libs/getorgchart/js/getorgchart.js"></script>
+                <script type="text/javascript"
+                        src="/nano_customer_chart/static/src/js/partner_org_chart.js"></script>
+                <script type="text/javascript"
+                        src="/nano_customer_chart/static/src/js/form_view.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
